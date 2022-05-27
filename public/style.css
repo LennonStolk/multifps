@@ -1,0 +1,229 @@
+/* Root styling */
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+}
+
+
+
+/* Outer container */
+#blocker {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    color: white;
+    transition: ease-in-out 200ms;
+}
+#instructions {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    background: linear-gradient(0.85turn, rgba(153, 204, 220, 0.5), rgba(153, 209, 174, 0.5));
+    transition: ease-in-out 200ms;
+}
+#roomsContainer {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+    justify-content: space-between;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    width: 100%;
+    max-width: min(1500px, 90vw);
+    height: 100%;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.44);
+    border-radius: 8px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+#rooms {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    align-content: start;
+    flex-direction: row;
+}
+
+
+
+/* Room div */
+.room {
+    font-weight: 500;
+    color: rgb(56, 56, 56);
+    text-align: left;
+    padding: 20px;
+    height: fit-content;
+    margin: 10px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    min-width: 300px;
+    box-shadow: 5px 5px 15px 5px #9ebeb7;
+}
+.roomTitle {
+    margin: 0;
+    display: inline-block;
+    font-size: 24px;
+}
+.joinButton {
+    font-weight: bold;
+    float: right;
+    border: none;
+    padding: 10px;
+    height: min-content;
+    width: max-content;
+    font-size: 16px;
+    background: linear-gradient(0.85turn, rgb(173, 144, 227), rgb(138, 171, 220));
+    color: white;
+    box-shadow: 5px 5px 15px 5px #e9e9e9;
+    border-radius: 5px;
+}
+.leaveButton {
+    font-weight: bold;
+    float: right;
+    border: none;
+    padding: 10px;
+    height: min-content;
+    width: max-content;
+    font-size: 16px;
+    background: linear-gradient(0.85turn, rgb(227, 144, 144), rgb(220, 190, 138));
+    color: white;
+    box-shadow: 5px 5px 15px 5px #e9e9e9;
+    border-radius: 5px;
+}
+.usersDiv {
+    margin-top: 15px;
+    background-color: rgb(238, 238, 238);
+    border-radius: 5px;
+    padding: 4px 0;
+}
+.user {
+    color: white;
+    line-height: 20px;
+    margin: 8px;
+    padding: 5px 12px 8px 12px;
+    text-shadow: 1px 1px 4px #000000, 1px 1px 4px #000000;
+    border-radius: 20px;
+    width: max-content;
+    box-shadow: 5px 5px 10px 0px #bebebe;
+}
+
+
+
+/* Bottom menu buttons */
+.bottomButton {
+    color: white;
+    position: absolute;
+    display: block;
+    right: 20px;
+    bottom: 20px;
+    border: none;
+    padding: 20px;
+    height: min-content;
+    width: max-content;
+    font-size: 24px;
+    background: linear-gradient(0.85turn, rgb(173, 144, 227), rgb(138, 171, 220));
+    box-shadow: 5px 5px 15px 5px #c4cdce;
+    border-radius: 4px;
+}
+#resume {
+    width: 140px;
+}
+#showAddRoom {
+    right: 170px;
+}
+
+
+
+/* Username dialog */
+#acceptNameButton:hover, .leaveButton:hover, .joinButton:hover, .bottomButton:hover {
+    filter: brightness(1.2);
+    transform: translateY(-1px);
+    transition: ease-in-out 250ms;
+}
+#usernameDialog {
+    border: none;
+    background: white;
+    border-radius: 5px;
+}
+#usernameDialog::backdrop {
+    background-color: rgba(0,0,0,0.7);
+}
+#usernameDialogTitle {
+    margin: 10px 0;
+    font-size: 18px;
+}
+#nameForm {
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+#name {
+    font-size: 24px;
+    margin: 0 10px;
+}
+#color {
+    display: block;
+    width: 36px;
+    height: 36px;
+    border-radius: 20px;
+    box-shadow: 5px 5px 15px 0px rgb(162, 162, 162);
+    border: 1px solid rgb(56, 56, 56);
+}
+#acceptNameButton {
+    border: none;
+    padding: 9px;
+    height: min-content;
+    width: max-content;
+    font-size: 14px;
+    background: linear-gradient(0.85turn, rgb(173, 144, 227), rgb(138, 171, 220));
+    box-shadow: 5px 5px 15px 0px rgb(162, 162, 162);
+    color: white;
+    border-radius: 2px;
+}
+
+
+
+/* Create room dialog */
+#addRoomDialog {
+    border: none;
+    background: white;
+    border-radius: 5px;
+}
+#addRoomDialog::backdrop {
+    background-color: rgba(0,0,0,0.7);
+}
+#submitNewRoom {
+    border: none;
+    padding: 9px;
+    height: min-content;
+    width: max-content;
+    font-size: 14px;
+    background: linear-gradient(0.85turn, rgb(173, 144, 227), rgb(138, 171, 220));
+    box-shadow: 5px 5px 15px 0px rgb(162, 162, 162);
+    color: white;
+    border-radius: 2px;
+}
+#roomName {
+    font-size: 24px;
+    margin: 0 10px;
+}
+#roomNameForm {
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}

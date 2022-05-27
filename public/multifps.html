@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Multifps</title>
+		<link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+
+		<!-- CSS -->
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<link rel="stylesheet" type="text/css" href="library/toastify.min.css">
+
+	</head>
+	<body>
+		<div id="blocker">
+			<div id="instructions">
+
+				<div id="roomsContainer">
+					<div>
+						<div id="rooms"></div>
+					</div>
+					<button id="showAddRoom" class="bottomButton">
+						+
+					</button>
+					<button id="resume" class="bottomButton">
+						RESUME
+					</button>
+				</div>
+
+				<dialog id="usernameDialog">
+					<h4 id="usernameDialogTitle">Pick a name:</h4>
+					<form method="dialog" id="nameForm">
+						<div id="color"></div>
+						<input type="text" id="name" placeholder="...">
+					  <button id="acceptNameButton">Accept</button>
+					</form>
+				</dialog>
+
+				<dialog id="addRoomDialog">
+					<h4 id="usernameDialogTitle">Room name:</h4>
+					<form method="dialog" id="roomNameForm">
+						<input type="text" id="roomName" placeholder="...">
+						<button id="submitNewRoom" onclick="makeRoom()">Create room</button>
+					</form>
+				</dialog>
+
+			</div>
+		</div>
+
+		<!-- Libraries -->
+		<script src="library/socket.io.min.js"></script>
+		<script src="library/three.min.js" type="text/javascript"></script>
+		<script src="library/cannon.min.js" type="text/javascript"></script>
+		<script src="library/PointerLockControls.js" type="text/javascript"></script>
+		<script src="library/GLTFLoader.js" type="text/javascript"></script>
+		<script src="library/toastify.min.js" type="text/javascript"></script>
+
+		<!-- Scripts -->	
+		<script src="nameColor.js" type="text/javascript" defer></script>
+		<script src="connection.js" type="text/javascript" defer></script>
+		<script src="gameObjectBuilder.js" type="text/javascript" defer></script>
+		<script src="multifps.js" type="text/javascript" defer></script>
+		
+	</body>
+</html>
