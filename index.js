@@ -9,11 +9,17 @@ const User = require("./classes/user");
 
 let rooms = [];
 
+// Routing
 app.use(express.static('public'));
 server.listen(process.env.PORT || 3000, () => {
     console.log('listening on *:3000');
 });
+app.get("/", (req, res) => {
+    res.redirect("multifps.html");
+})
 
+
+// Websocket endpoints
 io.on('connection', (socket) => {
 
     socket.on("makeUser", (newUser) => {
