@@ -10,7 +10,7 @@ const User = require("./classes/user");
 let rooms = [];
 
 app.use(express.static('public'));
-server.listen(3000, () => {
+server.listen(process.env.PORT || 3000, () => {
     console.log('listening on *:3000');
 });
 
